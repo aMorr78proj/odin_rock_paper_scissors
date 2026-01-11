@@ -23,58 +23,29 @@ function computerInput() {
 
 function winComparison(user, computer) {
     let win = "";
-    
-    switch(user) {
-        case "rock":
-            if (computer === "paper") {
-                console.log("The computer wins!");
-                win = "computer";
-                break;
-            }
-            else if (computer === "scissors") {
-                console.log("You win!");
-                win = "user";
-                break;
-            } 
-            else {
-                console.log("It's a tie! Try again!");
-                win = "none";
-                break;
-            }
-        case "paper":
-            if (computer === "scissors") {
-                console.log("The computer wins!");
-                win = "computer";
-                break;
-            }
-            else if (computer === "rock") {
-                console.log("You win!");
-                win = "user";
-                break;
-            } 
-            else {
-                console.log("It's a tie! Try again!");
-                win = "none";
-                break;
-            }
-        case "scissors":
-            if (computer === "rock") {
-                console.log("The computer wins!");
-                win = "computer";
-                break;
-            }
-            else if (computer === "paper") {
-                console.log("You win!");
-                win = "user";
-                break;
-            } 
-            else {
-                console.log("It's a tie! Try again!");
-                win = "none";
-                break;
-            }
-        default:
-            win = "none";
+
+    if (user === computer) 
+    {
+        console.log("It's a tie! Try again!");
+        win = "none";
+    } 
+    else if (  (user === "rock"     && computer === "scissors")
+            || (user === "paper"    && computer === "rock")
+            || (user === "scissors" && computer === "paper"))
+    {
+        console.log("You win!");
+        win = "user";
+    }
+    else if (  (computer === "rock"     && user === "scissors")
+            || (computer === "paper"    && user === "rock")
+            || (computer === "scissors" && user === "paper"))
+    {
+        console.log("Computer wins!");
+        win = "computer";
+    }
+    else 
+    {
+        win = "none";
     }
 
     return win;

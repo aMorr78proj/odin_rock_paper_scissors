@@ -2,18 +2,37 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/style.css">
         <title>Rock Paper Scissors</title>
     </head>
     <body>
         <script src="javascript/main.js"></script>
 
-        <h1>Go to Console to play Rock Paper Scissors!</h1>
+        <h1>Press a button to play Rock Paper Scissors!</h1>
         <!-- <button onclick="playRound();">Play!</button> -->
 
-        <div>
-            <button onclick="playRound('rock')";>Rock</button>
-            <button onclick="playRound('paper')">Paper</button>
-            <button onclick="playRound('scissors')">Scissors</button>
+        <div class="selection-buttons">
+            <button class="rock-btn" onclick="playRound('rock')";>Rock</button>
+            <button class="paper-btn" onclick="playRound('paper')">Paper</button>
+            <button class="scissors-btn" onclick="playRound('scissors')">Scissors</button>
+        </div>
+
+        <div class="score-keeper">
+            <div class="score-titles">
+                <p>User</p>
+                <p>Computer</p>
+            </div>
+            <div class="score-display">
+                <div class="user-score"></div>
+                <div class="computer-score"></div>
+            </div>
+        </div>
+
+        <div class="commentary">
+        </div>
+
+        <div class="reset">
+            <button class="reset-btn" onclick="playRound('reset');">Reset</button>
         </div>
     </body>
 </html>

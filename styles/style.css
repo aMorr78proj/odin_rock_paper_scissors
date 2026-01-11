@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10vw;
+}
+
+.selection-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-top: 10vw; */
+}
+
+button {
+    font-size: 20px;
+    padding: 15px 20px 15px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.rock-btn {
+    background: #d6cbbf;
+}
+
+.paper-btn {
+    background: #97b3ae;
+}
+
+.scissors-btn {
+    background: #f2c3b9;
+}
+
+.score-keeper {
+    display: flex;
+    flex-direction: column;
+}
+
+.score-titles {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.score-display {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.reset, .commentary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-btn {
+    background: #9babbe;
+}

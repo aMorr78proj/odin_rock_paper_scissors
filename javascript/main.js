@@ -64,14 +64,12 @@ function score(lastWin) {
     console.log(`The score is now ${userScore} to ${computerScore}!`);
 }
 
-function playRound() {
+function playRound(user) {
 
-    for (i=0; i<5; i++) {
-        let user = userInput();
+        // let user = userInput();
         let computer = computerInput();
         console.log(`You selected ${user}. The computer selected ${computer}`);
         let winner = winComparison(user, computer);
         score(winner);
-    }
 }
 
